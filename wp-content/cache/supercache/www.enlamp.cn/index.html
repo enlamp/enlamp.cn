@@ -1,0 +1,604 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="zh-CN">
+<head profile="http://gmpg.org/xfn/11">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Linux的企业级应用</title>
+    <link rel="stylesheet" href="http://www.enlamp.cn/wp-content/themes/p2/style.css?3" type="text/css" media="screen" />
+    <link rel="alternate" type="application/rss+xml" title="Linux的企业级应用 RSS Feed" href="http://www.enlamp.cn/?feed=rss2" />
+    <link rel="pingback" href="http://www.enlamp.cn/xmlrpc.php" />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.enlamp.cn/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.enlamp.cn/wp-includes/wlwmanifest.xml" /> 
+<script type='text/javascript' src='http://www.enlamp.cn/wp-includes/js/jquery/jquery.js?ver=1.2.6'></script>
+<script type='text/javascript' src='http://www.enlamp.cn/wp-includes/js/jquery/jquery.color.js?ver=2.0-4561'></script>
+<script type='text/javascript' src='http://www.enlamp.cn/wp-includes/js/comment-reply.js?ver=20081210'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+	p2txt = {
+		tagit: "Tag it",
+		goto_homepage: "Go to homepage",
+		n_new_updates: "%d new update(s)",
+		n_new_comments: "%d new comment(s)",
+		jump_to_top: "Jump to top",
+		not_posted_error: "An error has occured, your post was not posted",
+		update_posted: "You update has been posted",
+		loading: "Loading...",
+		cancel: "Cancel",
+		save: "Save",
+		hide_threads: "Hide threads",
+		show_threads: "Show threads",
+		unsaved_changes: "Your comments or posts will be lost if you continue."
+	}
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.enlamp.cn/wp-content/themes/p2/inc/p2.js?ver=200903301'></script>
+<script type='text/javascript' src='http://www.enlamp.cn/wp-content/themes/p2/inc/jquery.scrollTo-min.js?ver=2.7'></script>
+<meta name="generator" content="WordPress 2.7" />
+
+
+<!-- all in one seo pack 1.4.9 [309,340] -->
+<meta name="keywords" content="personal,ruby,tips,books,linux,server,mac" />
+<link rel="canonical" href="http://www.enlamp.cn/" />
+<!-- /all in one seo pack -->
+
+<style type='text/css'>
+table.recentcommentsavatar img.avatar { border: 0px; margin:0; }
+table.recentcommentsavatar a {border: 0px !important; background-color: transparent !important}
+td.recentcommentsavatartop {padding:0px 0px 1px 0px;
+							margin:   0px;
+							 }
+td.recentcommentsavatarend {padding:0px 0px 1px 0px;
+							margin:0px;
+							 }
+td.recentcommentstexttop {
+							 border: none !important; padding:0px 0px 0px 10px;}
+td.recentcommentstextend {
+							 border: none !important; padding:0px 0px 2px 10px;}
+</style><script type='text/javascript'>
+// <![CDATA[
+//Prologue Configuration
+var ajaxUrl = "http://www.enlamp.cn/wp-admin/admin-ajax.php";
+var updateRate = "30000";
+var nonce = "ca82720bd8";
+var templateDir  = "http://www.enlamp.cn/wp-content/themes/p2";
+var isFirstFrontPage = 1;
+var isFrontPage = 1;
+var isSingle = 0;
+var isPage = 0;
+var isUserLoggedIn = 0;
+var prologueTagsuggest = 1;
+var prologuePostsUpdates = 1;
+var prologueCommentsUpdates = 1;
+var getPostsUpdate = 0;
+var getCommentsUpdate = 0;
+var inlineEditPosts =  1;
+var inlineEditComments =  1;
+var wpUrl = "http://www.enlamp.cn";
+var rssUrl = "";
+var pageLoadTime = "2009-05-18 13:28:26";
+var latestPermalink = "http://www.enlamp.cn/?p=325";
+var original_title = document.title;
+var commentsOnPost = new Array;
+var postsOnPage = new Array;
+var postsOnPageQS = '';
+var currPost = -1;
+var currComment = -1;
+var commentLoop = false;
+var lcwidget = false;
+var hidecomments = false;
+var commentsLists = '';
+var newUnseenUpdates = 0;
+ // ]]>
+</script> </head>
+<body>
+<div id="notify"></div>
+<div id="help">
+	<dl class="directions">
+		<dt>c</dt><dd>compose new post</dd>
+		<dt>j</dt><dd>next post/next comment</dd>
+		<dt>k</dt> <dd>previous post/previous comment</dd>
+		<dt>r</dt> <dd>reply</dd>
+		<dt>e</dt> <dd>edit</dd>
+		<dt>o</dt> <dd>show/hide comments</dd>
+		<dt>t</dt> <dd>go to top</dd>
+		<dt>esc</dt> <dd>cancel</dd>
+	</dl>
+</div>
+
+<div id="header">
+	<div class="sleeve">
+		<h1><a href="http://www.enlamp.cn/">Linux的企业级应用</a></h1>
+			<small>致力于Linux在企业中的应用, LAMP, Mail, Cluster等架构(ENterprise Linux Apache MySQL Php)</small>	</div>
+</div>
+<div id="wrapper">
+	<div id="sidebar">
+<ul>
+	<li id="pages" class="widget widget_pages">		<h2 class="widgettitle">页面</h2>
+		<ul>
+			<li class="page_item page-item-2"><a href="http://www.enlamp.cn/?page_id=2" title="About">About</a></li>
+<li class="page_item page-item-305"><a href="http://www.enlamp.cn/?page_id=305" title="Service">Service</a></li>
+		</ul>
+	</li>
+<li id="prologue_recent_projects_widget" class="widget prologue_recent_projects_widget"><h2 class="widgettitle">Recent Tags</h2>
+<ul>
+
+<li>
+<a class="rss" href="http://www.enlamp.cn?feed=rss2&amp;tag=ruby">RSS</a>&nbsp;<a href="http://www.enlamp.cn/?tag=ruby">ruby</a>&nbsp;(&nbsp;6&nbsp;)
+</li>
+
+
+<li>
+<a class="rss" href="http://www.enlamp.cn?feed=rss2&amp;tag=tips">RSS</a>&nbsp;<a href="http://www.enlamp.cn/?tag=tips">tips</a>&nbsp;(&nbsp;8&nbsp;)
+</li>
+
+
+<li>
+<a class="rss" href="http://www.enlamp.cn?feed=rss2&amp;tag=books">RSS</a>&nbsp;<a href="http://www.enlamp.cn/?tag=books">books</a>&nbsp;(&nbsp;2&nbsp;)
+</li>
+
+
+<li>
+<a class="rss" href="http://www.enlamp.cn?feed=rss2&amp;tag=personal">RSS</a>&nbsp;<a href="http://www.enlamp.cn/?tag=personal">personal</a>&nbsp;(&nbsp;3&nbsp;)
+</li>
+
+
+<li>
+<a class="rss" href="http://www.enlamp.cn?feed=rss2&amp;tag=linux">RSS</a>&nbsp;<a href="http://www.enlamp.cn/?tag=linux">linux</a>&nbsp;(&nbsp;5&nbsp;)
+</li>
+
+
+<li>
+<a class="rss" href="http://www.enlamp.cn?feed=rss2&amp;tag=server">RSS</a>&nbsp;<a href="http://www.enlamp.cn/?tag=server">server</a>&nbsp;(&nbsp;8&nbsp;)
+</li>
+
+
+<li>
+<a class="rss" href="http://www.enlamp.cn?feed=rss2&amp;tag=mac">RSS</a>&nbsp;<a href="http://www.enlamp.cn/?tag=mac">mac</a>&nbsp;(&nbsp;1&nbsp;)
+</li>
+
+
+<li>
+<a class="rss" href="http://www.enlamp.cn?feed=rss2&amp;tag=security">RSS</a>&nbsp;<a href="http://www.enlamp.cn/?tag=security">security</a>&nbsp;(&nbsp;5&nbsp;)
+</li>
+
+
+<li>
+<a class="rss" href="http://www.enlamp.cn?feed=rss2&amp;tag=squid">RSS</a>&nbsp;<a href="http://www.enlamp.cn/?tag=squid">squid</a>&nbsp;(&nbsp;3&nbsp;)
+</li>
+
+
+<li>
+<a class="rss" href="http://www.enlamp.cn?feed=rss2&amp;tag=network">RSS</a>&nbsp;<a href="http://www.enlamp.cn/?tag=network">network</a>&nbsp;(&nbsp;1&nbsp;)
+</li>
+
+
+<li>
+<a class="rss" href="http://www.enlamp.cn?feed=rss2&amp;tag=mysql">RSS</a>&nbsp;<a href="http://www.enlamp.cn/?tag=mysql">mysql</a>&nbsp;(&nbsp;2&nbsp;)
+</li>
+
+
+<li>
+<a class="rss" href="http://www.enlamp.cn?feed=rss2&amp;tag=php">RSS</a>&nbsp;<a href="http://www.enlamp.cn/?tag=php">Php</a>&nbsp;(&nbsp;2&nbsp;)
+</li>
+
+
+	</ul>
+
+<p><a class="allrss" href="http://www.enlamp.cn/?feed=rss2">All Updates RSS</a></p>
+
+</li>
+<li id="search" class="widget widget_search"><form method="get" id="searchform" action="http://www.enlamp.cn/" >
+	<label class="hidden" for="s">搜索：</label>
+	<div><input type="text" value="" name="s" id="s" />
+	<input type="submit" id="searchsubmit" value="搜索" />
+	</div>
+	</form></li>
+<li id="archives" class="widget widget_archive"><h2 class="widgettitle">存档页</h2>
+		<ul>
+			<li><a href='http://www.enlamp.cn/?m=200905' title='2009年05月'>2009年05月</a></li>
+	<li><a href='http://www.enlamp.cn/?m=200904' title='2009年04月'>2009年04月</a></li>
+	<li><a href='http://www.enlamp.cn/?m=200903' title='2009年03月'>2009年03月</a></li>
+	<li><a href='http://www.enlamp.cn/?m=200902' title='2009年02月'>2009年02月</a></li>
+	<li><a href='http://www.enlamp.cn/?m=200901' title='2009年01月'>2009年01月</a></li>
+	<li><a href='http://www.enlamp.cn/?m=200812' title='2008年12月'>2008年12月</a></li>
+	<li><a href='http://www.enlamp.cn/?m=200811' title='2008年11月'>2008年11月</a></li>
+	<li><a href='http://www.enlamp.cn/?m=200810' title='2008年10月'>2008年10月</a></li>
+	<li><a href='http://www.enlamp.cn/?m=200808' title='2008年08月'>2008年08月</a></li>
+	<li><a href='http://www.enlamp.cn/?m=200804' title='2008年04月'>2008年04月</a></li>
+	<li><a href='http://www.enlamp.cn/?m=200801' title='2008年01月'>2008年01月</a></li>
+	<li><a href='http://www.enlamp.cn/?m=200712' title='2007年12月'>2007年12月</a></li>
+	<li><a href='http://www.enlamp.cn/?m=200710' title='2007年10月'>2007年10月</a></li>
+	<li><a href='http://www.enlamp.cn/?m=200709' title='2007年09月'>2007年09月</a></li>
+		</ul>
+</li>
+<style type="text/css">
+#akismetwrap #aka,#aka:link,#aka:hover,#aka:visited,#aka:active{color:#fff;text-decoration:none}
+#aka:hover{border:none;text-decoration:none}
+#aka:hover #akismet1{display:none}
+#aka:hover #akismet2,#akismet1{display:block}
+#akismet2{display:none;padding-top:2px}
+#akismeta{font-size:16px;font-weight:bold;line-height:18px;text-decoration:none}
+#akismetcount{display:block;font:15px Verdana,Arial,Sans-Serif;font-weight:bold;text-decoration:none}
+#akismetwrap #akismetstats{background:url(http://www.enlamp.cn/wp-content/plugins/akismet/akismet.gif) no-repeat top left;border:none;color:#fff;font:11px 'Trebuchet MS','Myriad Pro',sans-serif;height:40px;line-height:100%;overflow:hidden;padding:8px 0 0;text-align:center;width:120px}
+</style>
+<div id="akismetwrap"><div id="akismetstats"><a id="aka" href="http://akismet.com" title=""><div id="akismet1"><span id="akismetcount">37</span> <span id="akismetsc">垃圾评论</span></div> <div id="akismet2"><span id="akismetbb">blocked by</span><br /><span id="akismeta">Akismet</span></div></a></div></div>
+	</ul>
+<div style="clear: both;"></div>
+</div> <!-- // sidebar --><div class="sleeve_main">
+<div id="main">
+	<h2>Recent Updates 		<a class="rss" href="http://www.enlamp.cn/?feed=rss2">RSS</a>
+		<span class="controls">
+			<a href="#" id="togglecomments">Hide threads</a> | <a href="#directions" id="directions-keyboard">Keyboard Shortcuts</a>
+		</span>
+	</h2>
+<ul id="postlist">
+    <li id="prologue-289" class="user_id_7">
+<img alt='' src='http://www.gravatar.com/avatar/46678f8292ccfe7af9571481f6ca53af?s=48&amp;d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />	    <h4>
+		    <a href="http://www.enlamp.cn/?author=7" title="edyliu 发布">edyliu</a>		    <span class="meta">
+		        18:16 <em>on</em> 2009-04-23 |
+			    <a href="http://www.enlamp.cn/?p=289#comments" title="“Welcome !   MSN:      xfsuper@gmail.com &#8230;”的评论">3</a>			    <span class="actions">
+			        <a href="http://www.enlamp.cn/?p=289" class="thepermalink">Permalink</a>
+			         | <a rel='nofollow' href='http://www.enlamp.cn/?p=289#respond' onclick='return addComment.moveForm("prologue-289", "0", "respond", "289")'>Reply</a>			        			    </span>
+			    <br />
+			    Tags: <a href="http://www.enlamp.cn/?tag=personal" rel="tag">personal (3)</a> 		    </span>
+	    </h4>
+	    <div class="postcontent" id="content-289">
+	        <p>Welcome !</p>
+<p> MSN:      <a href="mailto:xfsuper@gmail.com">xfsuper@gmail.com</a><br />
+E - mail :  <a href="mailto:xfsuper@gmail.com">xfsuper@gmail.com</a></p>
+<p>Focus on LAMP for Enterprise.</p>	    </div> <!-- // postcontent -->
+        <div class="bottom_of_entry">&nbsp;</div>
+	    <ul class="commentlist inlinecomments">
+<li class="comment even thread-even depth-1" id="comment-53">
+    <img alt='' src='http://www.gravatar.com/avatar/005ff0750017a2fa9f3ef9502e4a915b?s=32&amp;d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />
+    <h4>
+        <a href='http://google.com' rel='external nofollow' class='url'>AccermaRorCom</a>
+        <span class="meta">
+            12:07 <em>on</em> 2009-05-01
+            <span class="actions"><a href="http://www.enlamp.cn/?p=289&#038;cpage=1#comment-53">Permalink</a>  </span><br />
+        </span>
+    </h4>
+    <div class="commentcontent" id="commentcontent-53">
+        <p>i love this site <img src='http://www.enlamp.cn/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> </p>
+
+    </div></li>
+<li class="comment byuser comment-author-edyliu bypostauthor odd alt thread-odd thread-alt depth-1" id="comment-57">
+    <img alt='' src='http://www.gravatar.com/avatar/46678f8292ccfe7af9571481f6ca53af?s=32&amp;d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />
+    <h4>
+        edyliu
+        <span class="meta">
+            06:21 <em>on</em> 2009-05-02
+            <span class="actions"><a href="http://www.enlamp.cn/?p=289&#038;cpage=1#comment-57">Permalink</a>  </span><br />
+        </span>
+    </h4>
+    <div class="commentcontent" id="commentcontent-57">
+        <p>tks for ur dropping by.</p>
+
+    </div></li>
+<li class="comment even thread-even depth-1" id="comment-62">
+    <img alt='' src='http://www.gravatar.com/avatar/6d994fdfd00d3568a4e30923e6dafdbe?s=32&amp;d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />
+    <h4>
+        <a href='http://google.com' rel='external nofollow' class='url'>Amorofratty</a>
+        <span class="meta">
+            04:28 <em>on</em> 2009-05-07
+            <span class="actions"><a href="http://www.enlamp.cn/?p=289&#038;cpage=1#comment-62">Permalink</a>  </span><br />
+        </span>
+    </h4>
+    <div class="commentcontent" id="commentcontent-62">
+        <p>i love this site <img src='http://www.enlamp.cn/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> </p>
+
+    </div></li>
+</ul>
+        <div style="display:none">
+            <div id="respond" style="display:none">
+                <h3>Reply <small id="cancel-comment-reply"><a rel="nofollow" id="cancel-comment-reply-link" href="/#respond" style="display:none;">点击此处取消回复。</a></small></h3>
+        <form id="commentform" action="http://www.enlamp.cn/wp-comments-post.php" method="post">
+        <div class="form">
+            <textarea id="comment" name="comment" cols ="45" rows="3"></textarea>
+        </div>
+        <label class="post-error" for="comment" id="commenttext_error"></label>
+                <table>
+        	<tr>
+        		<td>
+        			<label for="author">Name <em>(required)</em></label>
+        			<div class="form"><input id="author" name="author" type="text" value="" /></div>
+        		</td>
+        		<td>
+        			<label for="email">Email <em>(required)</em></label>
+        			<div class="form"><input id="email" name="email" type="text" value=""  /></div>
+        		</td>
+        		<td class="last-child">
+        			<label for="url">Web Site</label>
+        			<div class="form"><input id="url" name="url" type="text" value=""  /></div>
+        		</td>
+        	</tr>
+        </table>
+                <div>
+            <input id="comment-submit" name="submit" type="submit" value="Post Comment" />
+            <input type='hidden' name='comment_post_ID' value='289' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+&nbsp;
+            <span class="progress">
+                <img src="http://www.enlamp.cn/wp-content/themes/p2/i/indicator.gif" alt="Loading..." title='Loading...' />
+            </span>
+        </div>
+</form>
+            </div> <!-- #respond -->
+        </div> <!-- #wp-temp-form-div -->        
+    </li>    <li id="prologue-325" class="user_id_7">
+<img alt='' src='http://www.gravatar.com/avatar/46678f8292ccfe7af9571481f6ca53af?s=48&amp;d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />	    <h4>
+		    <a href="http://www.enlamp.cn/?author=7" title="edyliu 发布">edyliu</a>		    <span class="meta">
+		        03:56 <em>on</em> 2009-05-17 |
+			    <a href="http://www.enlamp.cn/?p=325#respond" title="“Problem: Upgrading from a previous versi&#8230;”的评论">0</a>			    <span class="actions">
+			        <a href="http://www.enlamp.cn/?p=325" class="thepermalink">Permalink</a>
+			         | <a rel='nofollow' href='http://www.enlamp.cn/?p=325#respond' onclick='return addComment.moveForm("prologue-325", "0", "respond", "325")'>Reply</a>			        			    </span>
+			    <br />
+			    Tags: <a href="http://www.enlamp.cn/?tag=ruby" rel="tag">ruby (6)</a>, <a href="http://www.enlamp.cn/?tag=tips" rel="tag">tips (8)</a> 		    </span>
+	    </h4>
+	    <div class="postcontent" id="content-325">
+	        <p>Problem:<br />
+Upgrading from a previous version of Rails to the latest 2.3.2, you get an error:</p>
+<p>NameError: uninitialized constant ApplicationController</p>
+<p>both in the web browser and in console.</p>
+<p>Solution:<br />
+Since the introduction of Rails 2.3 the application.rb file has been renamed to application_controller.rb.<br />
+So in order to solve the problem just rename your file application.rb to application_controller.rb.</p>	    </div> <!-- // postcontent -->
+        <div class="bottom_of_entry">&nbsp;</div>
+	        </li>    <li id="prologue-324" class="user_id_7">
+<img alt='' src='http://www.gravatar.com/avatar/46678f8292ccfe7af9571481f6ca53af?s=48&amp;d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />	    <h4>
+		    <a href="http://www.enlamp.cn/?author=7" title="edyliu 发布">edyliu</a>		    <span class="meta">
+		        03:28 <em>on</em> 2009-05-17 |
+			    <a href="http://www.enlamp.cn/?p=324#respond" title="“I read the following book this weekend  &#8230;”的评论">0</a>			    <span class="actions">
+			        <a href="http://www.enlamp.cn/?p=324" class="thepermalink">Permalink</a>
+			         | <a rel='nofollow' href='http://www.enlamp.cn/?p=324#respond' onclick='return addComment.moveForm("prologue-324", "0", "respond", "324")'>Reply</a>			        			    </span>
+			    <br />
+			    Tags: <a href="http://www.enlamp.cn/?tag=books" rel="tag">books (2)</a>, <a href="http://www.enlamp.cn/?tag=ruby" rel="tag">ruby (6)</a> 		    </span>
+	    </h4>
+	    <div class="postcontent" id="content-324">
+	        <p>I read the following book this weekend<br />
+<Agile Web Development with Rails, 2nd Edition><br />
+and do the exam it mentions, but there is a problem.</p>
+<p>Q: NoMethodError (undefined method `scaffold&#8217; for AdminController:Class):<br />
+A: my rails version is 2.3.2<br />
+the &#8220;scaffold&#8221; method was removed in Rails 2.0.<br />
+in order to resolve it , just run the following commands in the app directory<br />
+script/plugin install scaffolding<br />
+script/plugin install svn://errtheblog.com/svn/plugins/will_paginate</p>
+<p>when u want to practice with the examples, just install the lower version<br />
+ gem install rails &#8211;version 1.2.6 &#8211;include-dependencies</p>	    </div> <!-- // postcontent -->
+        <div class="bottom_of_entry">&nbsp;</div>
+	        </li>    <li id="prologue-323" class="user_id_7">
+<img alt='' src='http://www.gravatar.com/avatar/46678f8292ccfe7af9571481f6ca53af?s=48&amp;d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />	    <h4>
+		    <a href="http://www.enlamp.cn/?author=7" title="edyliu 发布">edyliu</a>		    <span class="meta">
+		        00:48 <em>on</em> 2009-05-16 |
+			    <a href="http://www.enlamp.cn/?p=323#comments" title="“I have just install my wireless card dri&#8230;”的评论">1</a>			    <span class="actions">
+			        <a href="http://www.enlamp.cn/?p=323" class="thepermalink">Permalink</a>
+			         | <a rel='nofollow' href='http://www.enlamp.cn/?p=323#respond' onclick='return addComment.moveForm("prologue-323", "0", "respond", "323")'>Reply</a>			        			    </span>
+			    <br />
+			    Tags: <a href="http://www.enlamp.cn/?tag=linux" rel="tag">linux (5)</a>, <a href="http://www.enlamp.cn/?tag=personal" rel="tag">personal (3)</a>, <a href="http://www.enlamp.cn/?tag=tips" rel="tag">tips (8)</a> 		    </span>
+	    </h4>
+	    <div class="postcontent" id="content-323">
+	        <p>I have just install my wireless card driver ( bcm4312)  on opensuse 11.1 (64bit)<br />
+my laptop is dell 1310</p>
+<p>I use the most simple way<br />
+sudo zypper ar <a href="http://packman.mirrors.skynet.be/pub/packman/suse/11.1/" rel="nofollow">http://packman.mirrors.skynet.be/pub/packman/suse/11.1/</a> pack_man<br />
+sudo zypper install broadcom-wl<br />
+sudo reboot<br />
+the wireless card works.</p>
+<p>install flash player x86_64 for firefox<br />
+<a href="http://labs.adobe.com/downloads/flashplayer10.html" rel="nofollow">http://labs.adobe.com/downloads/flashplayer10.html</a><br />
+sudo mkdir /usr/lib64/firefox/plugins<br />
+sudo cp libflashplayer.so /usr/lib64/firefox/plugins/</p>
+<p>ref links<br />
+<a href="http://en.opensuse.org/HCL/Network_Adapters_" rel="nofollow">http://en.opensuse.org/HCL/Network_Adapters_</a>(Wireless)/Broadcom_BCM43xx</p>	    </div> <!-- // postcontent -->
+        <div class="bottom_of_entry">&nbsp;</div>
+	    <ul class="commentlist inlinecomments">
+<li class="comment even thread-even depth-1" id="comment-81">
+    <img alt='' src='http://www.gravatar.com/avatar/82b39706e81ab3e325e91e71e4d1d2e1?s=32&amp;d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />
+    <h4>
+        edyliu
+        <span class="meta">
+            07:26 <em>on</em> 2009-05-16
+            <span class="actions"><a href="http://www.enlamp.cn/?p=323&#038;cpage=1#comment-81">Permalink</a>  </span><br />
+        </span>
+    </h4>
+    <div class="commentcontent" id="commentcontent-81">
+        <p>music codecs<br />
+<a href="http://opensuse-community.org/Restricted_Formats/11.1" rel="nofollow">http://opensuse-community.org/Restricted_Formats/11.1</a></p>
+
+    </div></li>
+</ul>
+    </li>    <li id="prologue-322" class="user_id_7">
+<img alt='' src='http://www.gravatar.com/avatar/46678f8292ccfe7af9571481f6ca53af?s=48&amp;d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />	    <h4>
+		    <a href="http://www.enlamp.cn/?author=7" title="edyliu 发布">edyliu</a>		    <span class="meta">
+		        21:50 <em>on</em> 2009-05-13 |
+			    <a href="http://www.enlamp.cn/?p=322#respond" title="“I am sorry to mongrel ! What are we focu&#8230;”的评论">0</a>			    <span class="actions">
+			        <a href="http://www.enlamp.cn/?p=322" class="thepermalink">Permalink</a>
+			         | <a rel='nofollow' href='http://www.enlamp.cn/?p=322#respond' onclick='return addComment.moveForm("prologue-322", "0", "respond", "322")'>Reply</a>			        			    </span>
+			    <br />
+			    Tags: <a href="http://www.enlamp.cn/?tag=ruby" rel="tag">ruby (6)</a>, <a href="http://www.enlamp.cn/?tag=server" rel="tag">server (8)</a> 		    </span>
+	    </h4>
+	    <div class="postcontent" id="content-322">
+	        <p>I am sorry to mongrel ! What are we focuse on, Mongrel ?</p>
+<p>Mongrel V.S. Passenger</p>
+<p>just forget about Mongrel, and to know why ?<br />
+ <a href="http://www.enlamp.cn/?p=322#more-322" class="more-link">(More &#8230;)</a></p>	    </div> <!-- // postcontent -->
+        <div class="bottom_of_entry">&nbsp;</div>
+	        </li>    <li id="prologue-319" class="user_id_7">
+<img alt='' src='http://www.gravatar.com/avatar/46678f8292ccfe7af9571481f6ca53af?s=48&amp;d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />	    <h4>
+		    <a href="http://www.enlamp.cn/?author=7" title="edyliu 发布">edyliu</a>		    <span class="meta">
+		        03:14 <em>on</em> 2009-05-13 |
+			    <a href="http://www.enlamp.cn/?p=319#respond" title="“Besides the Mongrel_Rail for RoR app, I &#8230;”的评论">0</a>			    <span class="actions">
+			        <a href="http://www.enlamp.cn/?p=319" class="thepermalink">Permalink</a>
+			         | <a rel='nofollow' href='http://www.enlamp.cn/?p=319#respond' onclick='return addComment.moveForm("prologue-319", "0", "respond", "319")'>Reply</a>			        			    </span>
+			    <br />
+			    Tags: <a href="http://www.enlamp.cn/?tag=linux" rel="tag">linux (5)</a>, <a href="http://www.enlamp.cn/?tag=ruby" rel="tag">ruby (6)</a>, <a href="http://www.enlamp.cn/?tag=server" rel="tag">server (8)</a> 		    </span>
+	    </h4>
+	    <div class="postcontent" id="content-319">
+	        <p>Besides the Mongrel_Rail for RoR app, I found a new server modules:<br />
+Phusion Passenger<br />
+It is easy to deploy with Apache<br />
+<a href="http://www.modrails.com/" rel="nofollow">http://www.modrails.com/</a></p>
+<p>I have tried it, it works well, maybe more test on it in the future.</p>
+<p>my ruby.conf for my app in Apache</p>
+<p>&#8220;<"VirtualHost *:80">&#8221;<br />
+	ServerName myip<br />
+	DocumentRoot /path/to/app/public/ # the RoR app&#8217;s public directory</p>
+<p>	AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/javascript text/css application/x-javascript<br />
+	BrowserMatch ^Mozilla/4 gzip-only-text/html<br />
+	BrowserMatch ^Mozilla/4.0[678] no-gzip<br />
+	BrowserMatch \bMSIE !no-gzip !gzip-only-text/html</p>
+<p>	ExpiresActive On<br />
+	ExpiresByType image/gif A2592000<br />
+	ExpiresByType application/x-javascript A2592000<br />
+	ExpiresByType text/css A2592000<br />
+	ExpiresByType text/html M604800<br />
+&#8220;<"/VirtualHost">&#8220;</p>	    </div> <!-- // postcontent -->
+        <div class="bottom_of_entry">&nbsp;</div>
+	        </li>    <li id="prologue-316" class="user_id_7">
+<img alt='' src='http://www.gravatar.com/avatar/46678f8292ccfe7af9571481f6ca53af?s=48&amp;d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />	    <h4>
+		    <a href="http://www.enlamp.cn/?author=7" title="edyliu 发布">edyliu</a>		    <span class="meta">
+		        21:16 <em>on</em> 2009-05-11 |
+			    <a href="http://www.enlamp.cn/?p=316#respond" title="“Install Ruby On Rails on MacOS ( not as &#8230;”的评论">0</a>			    <span class="actions">
+			        <a href="http://www.enlamp.cn/?p=316" class="thepermalink">Permalink</a>
+			         | <a rel='nofollow' href='http://www.enlamp.cn/?p=316#respond' onclick='return addComment.moveForm("prologue-316", "0", "respond", "316")'>Reply</a>			        			    </span>
+			    <br />
+			    Tags: mac, <a href="http://www.enlamp.cn/?tag=ruby" rel="tag">ruby (6)</a> 		    </span>
+	    </h4>
+	    <div class="postcontent" id="content-316">
+	        <p>Install Ruby On Rails on MacOS ( not as admin user )</p>
+<p>1. install ruby</p>
+<p>get the ruby sources from the ruby-lang.org, we take ruby-1.8.6-p368.tar.bz2 for e.g.<br />
+tar xvf ruby-1.8.6-p368.tar.bz2 &#038;&#038; cd ruby-1.8.6-p368<br />
+./configure &#8211;prefix=/User/yourname/ruby &#038;&#038; make &#038;&#038; make install</p>
+<p>2.set the enviorment<br />
+edit the ~/.bash_profile, change the PATH=/User/yourname/ruby/bin:$PATH<br />
+source ~/.bash_profile   and u can check by command: ruby -v</p>
+<p>3. install gems<br />
+get the gems from rubyforge.org , we take rubygems-1.3.3.tgz for e.g.<br />
+tar xvf rubygems-1.3.3.tgz &#038;&#038; cd rubygems<br />
+ruby setup.rb<br />
+ <a href="http://www.enlamp.cn/?p=316#more-316" class="more-link">(More &#8230;)</a></p>	    </div> <!-- // postcontent -->
+        <div class="bottom_of_entry">&nbsp;</div>
+	        </li>    <li id="prologue-314" class="user_id_7">
+<img alt='' src='http://www.gravatar.com/avatar/46678f8292ccfe7af9571481f6ca53af?s=48&amp;d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />	    <h4>
+		    <a href="http://www.enlamp.cn/?author=7" title="edyliu 发布">edyliu</a>		    <span class="meta">
+		        01:38 <em>on</em> 2009-05-11 |
+			    <a href="http://www.enlamp.cn/?p=314#respond" title="“I will focus on Ruby on Rails this one w&#8230;”的评论">0</a>			    <span class="actions">
+			        <a href="http://www.enlamp.cn/?p=314" class="thepermalink">Permalink</a>
+			         | <a rel='nofollow' href='http://www.enlamp.cn/?p=314#respond' onclick='return addComment.moveForm("prologue-314", "0", "respond", "314")'>Reply</a>			        			    </span>
+			    <br />
+			    Tags: <a href="http://www.enlamp.cn/?tag=ruby" rel="tag">ruby (6)</a> 		    </span>
+	    </h4>
+	    <div class="postcontent" id="content-314">
+	        <p>I will focus on Ruby on Rails this one week or two &#8230;(server side of course)</p>
+<p>get some links to remember:</p>
+<p><a href="http://www.scribd.com/doc/49575/Scaling-Rails-Presentation" rel="nofollow">http://www.scribd.com/doc/49575/Scaling-Rails-Presentation</a><br />
+<a href="http://www.scribd.com/doc/9130075/Deploying-and-Monitoring-Ruby-on-Rails" rel="nofollow">http://www.scribd.com/doc/9130075/Deploying-and-Monitoring-Ruby-on-Rails</a><br />
+<a href="http://haproxy.1wt.eu/" rel="nofollow">http://haproxy.1wt.eu/</a><br />
+Rails Performance Testing Tools<br />
+<a href="http://blog.fiveruns.com/2008/10/30/benchmarking-rails" rel="nofollow">http://blog.fiveruns.com/2008/10/30/benchmarking-rails</a></p>
+<p>good articles to scaling the ruby apps.<br />
+<a href="http://poocs.net/2006/3/13/the-adventures-of-scaling-stage-1" rel="nofollow">http://poocs.net/2006/3/13/the-adventures-of-scaling-stage-1</a><br />
+<a href="http://poocs.net/articles/2006/03/20/the-adventures-of-scaling-stage-2" rel="nofollow">http://poocs.net/articles/2006/03/20/the-adventures-of-scaling-stage-2</a><br />
+<a href="http://poocs.net/articles/2006/03/27/the-adventures-of-scaling-stage-3" rel="nofollow">http://poocs.net/articles/2006/03/27/the-adventures-of-scaling-stage-3</a><br />
+<a href="http://poocs.net/articles/2006/04/03/the-adventures-of-scaling-stage-4" rel="nofollow">http://poocs.net/articles/2006/04/03/the-adventures-of-scaling-stage-4</a></p>
+<p>Memcached Integration in Rails<br />
+<a href="http://www.linuxjournal.com/article/10300" rel="nofollow">http://www.linuxjournal.com/article/10300</a></p>	    </div> <!-- // postcontent -->
+        <div class="bottom_of_entry">&nbsp;</div>
+	        </li>    <li id="prologue-313" class="user_id_7">
+<img alt='' src='http://www.gravatar.com/avatar/46678f8292ccfe7af9571481f6ca53af?s=48&amp;d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />	    <h4>
+		    <a href="http://www.enlamp.cn/?author=7" title="edyliu 发布">edyliu</a>		    <span class="meta">
+		        03:12 <em>on</em> 2009-05-05 |
+			    <a href="http://www.enlamp.cn/?p=313#respond" title="“iozone is a filesystem benchmark tool. T&#8230;”的评论">0</a>			    <span class="actions">
+			        <a href="http://www.enlamp.cn/?p=313" class="thepermalink">Permalink</a>
+			         | <a rel='nofollow' href='http://www.enlamp.cn/?p=313#respond' onclick='return addComment.moveForm("prologue-313", "0", "respond", "313")'>Reply</a>			        			    </span>
+			    <br />
+			    Tags: <a href="http://www.enlamp.cn/?tag=linux" rel="tag">linux (5)</a> 		    </span>
+	    </h4>
+	    <div class="postcontent" id="content-313">
+	        <p>iozone is a filesystem benchmark tool. The benchmark generates and measures a variety of file operations. Iozone has been ported to many machines and runs under many operating systems. </p>
+<p><a href="http://www.iozone.org/" rel="nofollow">http://www.iozone.org/</a></p>	    </div> <!-- // postcontent -->
+        <div class="bottom_of_entry">&nbsp;</div>
+	        </li>    <li id="prologue-312" class="user_id_7">
+<img alt='' src='http://www.gravatar.com/avatar/46678f8292ccfe7af9571481f6ca53af?s=48&amp;d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />	    <h4>
+		    <a href="http://www.enlamp.cn/?author=7" title="edyliu 发布">edyliu</a>		    <span class="meta">
+		        19:27 <em>on</em> 2009-05-04 |
+			    <a href="http://www.enlamp.cn/?p=312#respond" title="“20 of the Best Free Linux Books  http://&#8230;”的评论">0</a>			    <span class="actions">
+			        <a href="http://www.enlamp.cn/?p=312" class="thepermalink">Permalink</a>
+			         | <a rel='nofollow' href='http://www.enlamp.cn/?p=312#respond' onclick='return addComment.moveForm("prologue-312", "0", "respond", "312")'>Reply</a>			        			    </span>
+			    <br />
+			    Tags: <a href="http://www.enlamp.cn/?tag=books" rel="tag">books (2)</a> 		    </span>
+	    </h4>
+	    <div class="postcontent" id="content-312">
+	        <p>20 of the Best Free Linux Books</p>
+<p><a href="http://www.linuxlinks.com/article/20090405061458383/20oftheBestFreeLinuxBooks-Part1.html" rel="nofollow">http://www.linuxlinks.com/article/20090405061458383/20oftheBestFreeLinuxBooks-Part1.html</a></p>	    </div> <!-- // postcontent -->
+        <div class="bottom_of_entry">&nbsp;</div>
+	        </li>    <li id="prologue-311" class="user_id_7">
+<img alt='' src='http://www.gravatar.com/avatar/46678f8292ccfe7af9571481f6ca53af?s=48&amp;d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D48&amp;r=G' class='avatar avatar-48 photo' height='48' width='48' />	    <h4>
+		    <a href="http://www.enlamp.cn/?author=7" title="edyliu 发布">edyliu</a>		    <span class="meta">
+		        00:00 <em>on</em> 2009-05-04 |
+			    <a href="http://www.enlamp.cn/?p=311#comments" title="“ruby &#038; gems  gem install extension_name &#8230;”的评论">1</a>			    <span class="actions">
+			        <a href="http://www.enlamp.cn/?p=311" class="thepermalink">Permalink</a>
+			         | <a rel='nofollow' href='http://www.enlamp.cn/?p=311#respond' onclick='return addComment.moveForm("prologue-311", "0", "respond", "311")'>Reply</a>			        			    </span>
+			    <br />
+			    Tags: <a href="http://www.enlamp.cn/?tag=tips" rel="tag">tips (8)</a> 		    </span>
+	    </h4>
+	    <div class="postcontent" id="content-311">
+	        <p>ruby &#038; gems</p>
+<p>gem install extension_name -v version<br />
+gem uninstall extension_name -v version</p>
+<p>I met a problem when I install the mysql<br />
+it&#8217;s caused by the mysql extension search /usr/local for mysql develop files<br />
+ln -s /usr/include/mysql /usr/local/include/<br />
+ln -s /usr/lib/mysql /usr/local/lib/</p>
+<p>when I started the app that created with ruby<br />
+it show the warning:<br />
+boot.rb:20:Warning: Gem::SourceIndex#search support for String patterns is deprecated</p>
+<p>we can change the boot.rb on line 20<br />
+rails_gem = Gem.cache.search(&#8217;rails&#8217;, &#8220;=#{rails_gem_version}.0&#8243;).sort_by { |g| g.version.version }.last<br />
+&#8220;Gem.cache.search&#8221;, just replace &#8220;search&#8221; with &#8220;find_name&#8221;.<br />
+or changed into<br />
+rails_gem = Gem.cache.search(Gem::Dependency.new(‘rails’,“~>#{version}.0”)).sort_by { |g| g.version.version }.last</p>	    </div> <!-- // postcontent -->
+        <div class="bottom_of_entry">&nbsp;</div>
+	    <ul class="commentlist inlinecomments">
+<li class="comment even thread-even depth-1" id="comment-60">
+    <img alt='' src='http://www.gravatar.com/avatar/c9e640c9540ea838cdc52e40779eefc0?s=32&amp;d=http%3A%2F%2Fwww.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D32&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />
+    <h4>
+        <a href='http://www.jpweightlossblog.com' rel='external nofollow' class='url'>I Lost Thirty Póunds in Thirty Days</a>
+        <span class="meta">
+            18:50 <em>on</em> 2009-05-06
+            <span class="actions"><a href="http://www.enlamp.cn/?p=311&#038;cpage=1#comment-60">Permalink</a>  </span><br />
+        </span>
+    </h4>
+    <div class="commentcontent" id="commentcontent-60">
+        <p>Hi, interesting post. I have been thinking about this topic,so thanks for sharing. I&#8217;ll likely be coming back to your posts. Keep up the good work</p>
+
+    </div></li>
+</ul>
+    </li></ul>
+    <div class="navigation"><p><a href="http://www.enlamp.cn/?paged=2" >Older&nbsp;Posts&nbsp;&rarr;</a></p></div>
+</div> <!-- main -->
+</div> <!-- sleeve -->
+<div style="clear: both;"></div>
+</div> <!-- // wrapper -->
+
+	<div id="footer">
+		<p> 
+		    <strong>Linux的企业级应用</strong> is proudly powered by <a href="http://wordpress.org/" rel="generator">WordPress</a>.		    CopyRight: www.enlamp.cn		</p>
+	</div>
+	
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6759682-3");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>
+<!-- Dynamic page generated in 0.301 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2009-05-18 06:28:26 -->
+<!-- super cache -->

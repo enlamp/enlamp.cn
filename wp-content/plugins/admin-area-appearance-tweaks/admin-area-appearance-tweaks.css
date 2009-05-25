@@ -1,0 +1,84 @@
+.wrap h2,
+#footer,
+#footer a,
+#dashboard_right_now p.sub,
+.tablenav .displaying-num,
+.inline-edit-row fieldset span.title,
+.inline-edit-row fieldset span.checkbox-title,
+.setting-description,
+.form-wrap p,
+#utc-time,
+#local-time,
+.howto,
+#media-upload p.help,
+#media-upload label.help
+{
+	font-style: normal !important;
+}
+
+#screen-meta a.show-settings,
+#favorite-actions a,
+#adminmenu .wp-submenu a,
+.submit input,
+.button,
+.button-primary,
+.button-secondary,
+.button-highlighted,
+#postcustomstuff .submit input,
+#the-comment-list .comment-item p.comment-actions,
+.hndle a,
+#dashboard_quick_press #media-buttons,
+.subsubsub,
+#wpcontent select,
+.widefat td, .widefat th,
+.inline-edit-row fieldset ul.cat-checklist label,
+.inline-edit-row .catshow,
+.inline-edit-row .cathide,
+.inline-edit-row #bulk-titles div,
+.form-wrap p,
+.form-wrap label,
+.widefat td p,
+#poststuff .inside,
+#poststuff .inside p,
+.form-table td,
+#wpbody-content .describe td,
+kbd,
+code,
+#edithead .inside,
+#edithead .inside input,
+ul#widget-list li.widget-list-item div.widget-description,
+.widget-control-edit,
+li.widget-list-control-item div.widget-control,
+.postbox p,
+.postbox ul,
+.postbox ol,
+.postbox blockquote,
+#wp-version-message
+{
+	font-size:12px !important;
+}
+
+#wphead h1 a span
+{
+	font-size:12px !important;
+}
+
+a {
+	text-decoration:none;
+}
+
+#active-plugins-table .num, #posts-filter #author, #posts-filter #tags {
+	min-width:50px !important;
+}
+
+.inline-editor .date input[name="aa"], #posts-filter #comments,#posts-filter #description{
+	min-width:35px !important;
+}
+
+.tablenav select#cat {
+	width:135px !important;
+}
+
+#adv-settings label,#posts-filter #name {
+	min-width:10em !important;
+}
